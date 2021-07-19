@@ -63,7 +63,15 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    
+    //prompts
+    inquirer.prompt(questions)
+    //store responses
+    
+    //then create README 
+
+}
 
 // Function call to initialize app
 init();
