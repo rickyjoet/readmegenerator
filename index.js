@@ -68,8 +68,12 @@ function init() {
     //prompts
     inquirer.prompt(questions)
     //store responses
-    
-    //then create README 
+    .then((answers) => {
+        console.log("README is generated")
+        //then create README 
+        writeToFile('readme.md', generateMarkdown(answers))
+
+    })
 
 }
 
