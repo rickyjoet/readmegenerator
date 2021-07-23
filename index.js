@@ -6,11 +6,12 @@ const path = require('path');
 
 
 // TODO: Create an array of questions for user input
+
 const questions = [
    {
        type: 'input',
        name: 'title',        
-       message: "What is your project title?"
+       message: "What is the title of your project?"
     },  
     {
         type: 'input',
@@ -20,17 +21,17 @@ const questions = [
      {
         type: 'input',
         name: 'install',        
-        message: "What are installation instructions", 
+        message: "What is needed for your project?", 
      },
      {
         type: 'input',
         name: 'usage',        
-        message: "Describe the usage information",
+        message: "Describe how this project is helpful?",
      },
      {
         type: 'input',
         name: 'guideline',        
-        message:  "What are the contribution guidelines", 
+        message:  "What are the guideline instructions?", 
      },
      {
         type: 'input',
@@ -69,9 +70,9 @@ function init() {
     inquirer.prompt(questions)
     //store responses
     .then((answers) => {
-        console.log("README is generated")
-        //then create README 
-        writeToFile('readme.md', generateMarkdown(answers))
+       //then create README 
+       writeToFile('readme.md', generateMarkdown(answers))
+       console.log("README is generated")
 
     })
 
